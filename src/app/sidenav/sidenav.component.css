@@ -1,0 +1,73 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 170px;
+  
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  background-color:inherit;
+  height:170px;
+
+  background-image: url("../../assets/silky.JPG");
+border-radius: 70%;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+mat-divider{
+border-top-color: black!important;
+border-top-width: 3px;
+
+
+}
+.mat-sidenav-content .mat-toolbar{
+  background-color:	 black;
+}
+span {
+  -webkit-font-smoothing: antialased;
+  -moz-osx-font-smoothing: antialased;
+  font-family: 'Roboto', sans-serif;
+  font-size:20px;
+  
+
+}
+
+a:hover{
+ background-color: black !important;
+ color:white;
+
+}
+a{
+  margin-bottom: 10px;
+}
+mat-icon{
+  padding-right: 5px;
+}
+mat-divider{
+  border-top-color:  white !important;
+  border-top-width: 3px;
+  /* margin-top: 10px; */
+}
+
+.ngc {
+ display: flex;
+ justify-content: center;
+ align-items: center !important;
+ background-image: url("../../assets/ff.jpeg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 590px;
+ margin-top: 2px;
+ /* background-color: red; */
+ }
+ 

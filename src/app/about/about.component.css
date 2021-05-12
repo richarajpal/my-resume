@@ -1,0 +1,50 @@
+.example-card {
+    max-width: 400px;
+    background-color: cyan;
+  }
+  .content {
+    padding: 16px;
+    background:white;
+    max-width: 25%;
+    position: absolute;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+/* mat-card{
+  
+  background-color: rgba(0, 0, 0, 0)
+} */
+span{
+  font-weight: bolder;
+  padding: 10px;
+}
+mat-card-header{
+  border: 3px ;
+  display: flex;
+  background-color: black;
+  color:white;
+  justify-content: center;
+
+  
+}
+mat-card-title{
+  margin-top:10px;
+}
+mat-card{
+  background-color: rgba(255,255,255,0.7);
+}
+#div1 {animation-timing-function: linear;}
+/* #div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;} */
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+  
+ 
+  
