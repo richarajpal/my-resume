@@ -18,4 +18,9 @@ export class ResumeserviceService {
 
 
   }
+  download(): Observable<Blob> {
+    return this.http.get('../assets/Silkyresume.pdf', {
+      responseType: 'blob'
+    })
+  }
 }

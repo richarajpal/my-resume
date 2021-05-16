@@ -1,8 +1,8 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" mode= 'push' fixedInViewport
+  <mat-sidenav #drawer class="sidenav" mode= 'side' fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [mode]="(isHandset$ | async) ? 'side' : 'side'"
+      [opened]="hidee">
     <mat-toolbar>
      
       <mat-divider></mat-divider>
@@ -10,21 +10,21 @@
     
     <mat-nav-list>
       <mat-divider></mat-divider>
-      <a mat-list-item [routerLink]='["/home"]' routerLinkActive="active">
+      <a mat-list-item [routerLink]='["/home"]' routerLinkActive="active"(click)="sidenavhide()" >
        
         <mat-icon class="icon-display" aria-label="Example home icon">home</mat-icon>
         <span>Home</span>
       </a>
-      <a mat-list-item [routerLink]='["/about"]' routerLinkActive="active">
-        <mat-icon class="icon-display" aria-label="Example home icon">person</mat-icon>
+      <a mat-list-item [routerLink]='["/about"]' routerLinkActive="active" (click)="sidenavhide()">
+        <mat-icon class="icon-display" aria-label="Example home icon" >person</mat-icon>
       <span>About</span></a>
-      <a mat-list-item [routerLink]='["/education"]' routerLinkActive="active">
+      <a mat-list-item [routerLink]='["/education"]' routerLinkActive="active" (click)="sidenavhide()">
       <mat-icon  class="icon-display" aria-hidden="false" aria-label="Example home icon">school</mat-icon>
       <span>Education</span></a>
-      <a mat-list-item [routerLink]='["/skills"]' routerLinkActive="active">
+      <a mat-list-item [routerLink]='["/skills"]' routerLinkActive="active" (click)="sidenavhide()" >
       <mat-icon  class="icon-display" aria-hidden="false" aria-label="Example home icon">work</mat-icon>
       <span>Skills</span></a>
-      <a mat-list-item [routerLink]='["/interest"]' routerLinkActive="active">
+      <a mat-list-item [routerLink]='["/interest"]' routerLinkActive="active" (click)="sidenavhide()">
       <mat-icon  class="icon-display" aria-hidden="false" aria-label="Example home icon">face</mat-icon>
       <span>Interests</span></a>
     </mat-nav-list>
