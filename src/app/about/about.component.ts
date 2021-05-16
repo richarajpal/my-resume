@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import{ResumeserviceService}from '../resumeservice.service'
 
 
@@ -16,9 +16,9 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.rs.about().subscribe(
-      data=>{this.about=data,
-      console.log(this.about)
-      }
+      data=>this.about=data
+      
+      
 
     )
 

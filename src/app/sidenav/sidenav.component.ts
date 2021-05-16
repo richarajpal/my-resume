@@ -21,12 +21,11 @@ export class SidenavComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}   
   sidenavhide(){
     this.hidee=true
-    console.log(this.hidee);
+    
 
     if(window.innerWidth<800){
       this.hidee=false
-      console.log("ander")
-      console.log(this.hidee);
+      
       }
      
     

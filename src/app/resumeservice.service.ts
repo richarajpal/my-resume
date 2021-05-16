@@ -13,7 +13,7 @@ export class ResumeserviceService {
   constructor(private http: HttpClient) { }
 
   about(): Observable<any> {
-    return this.http.get<any>("./assets/db.json").pipe(tap(data => console.log(JSON.stringify(data))))
+    return this.http.get<any>("./assets/db.json")
 
 
 
