@@ -1,0 +1,11 @@
+.ngc {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    background-image: url("../assets/ff.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 590px;
+    margin-top: 2px;
+    /* background-color: red; */
+    }

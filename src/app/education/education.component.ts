@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent implements OnInit {
-  panelOpenState = false;
  
   constructor() { }
 

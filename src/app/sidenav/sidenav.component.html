@@ -1,8 +1,8 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" mode= 'side' fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'side' : 'side'"
-      [opened]="hidee">
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) ? hidee : 'true'">
     <mat-toolbar>
      
       <mat-divider></mat-divider>
@@ -10,23 +10,24 @@
     
     <mat-nav-list>
       <mat-divider></mat-divider>
-      <a mat-list-item [routerLink]='["/home"]' routerLinkActive="active"(click)="sidenavhide()" >
+      <a mat-list-item [routerLink]='["/home"]'  class="glow-on-hover" routerLinkActive="active" (click)="sidenavhide(false)">
        
         <mat-icon class="icon-display" aria-label="Example home icon">home</mat-icon>
         <span>Home</span>
       </a>
-      <a mat-list-item [routerLink]='["/about"]' routerLinkActive="active" (click)="sidenavhide()">
+      <a mat-list-item [routerLink]='["/about"]' class="glow-on-hover" routerLinkActive="active" (click)="sidenavhide(false)">
         <mat-icon class="icon-display" aria-label="Example home icon" >person</mat-icon>
       <span>About</span></a>
-      <a mat-list-item [routerLink]='["/education"]' routerLinkActive="active" (click)="sidenavhide()">
+      <a mat-list-item [routerLink]='["/education"]' class="glow-on-hover" routerLinkActive="active" (click)="sidenavhide(false)">
       <mat-icon  class="icon-display" aria-hidden="false" aria-label="Example home icon">school</mat-icon>
       <span>Education</span></a>
-      <a mat-list-item [routerLink]='["/skills"]' routerLinkActive="active" (click)="sidenavhide()" >
+      <a mat-list-item [routerLink]='["/skills"]' class="glow-on-hover" routerLinkActive="active" (click)="sidenavhide(false)" >
       <mat-icon  class="icon-display" aria-hidden="false" aria-label="Example home icon">work</mat-icon>
       <span>Skills</span></a>
-      <a mat-list-item [routerLink]='["/interest"]' routerLinkActive="active" (click)="sidenavhide()">
+      <a mat-list-item [routerLink]='["/interest"]' class="glow-on-hover" routerLinkActive="active" (click)="sidenavhide(false)">
       <mat-icon  class="icon-display" aria-hidden="false" aria-label="Example home icon">face</mat-icon>
       <span>Interests</span></a>
+      <!-- (click)="sidenavhide('true')" -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -36,16 +37,30 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
+        (click)="sidenavhide(true)"
         >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      
     SILKY(System Engineer)
-  
+   
+    <span class="spacer"></span>
+    <button class="git" mat-fab (click)="openDialog()">
+      Reviews
+
+    </button>
+    <button  (click)="git()" mat-stroked-button>
+      <img src="../../assets/GitHub.png">
+      GitHub
+      
+
+    </button>
+    
+   
     </mat-toolbar>
   
-   <div class="ngc">
-    <ng-content></ng-content>
-   </div>
+  
+   <ng-content></ng-content>
 
 
     

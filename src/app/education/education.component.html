@@ -6,39 +6,50 @@
     <mat-card-content>
     
         <mat-accordion >
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel >
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         XII
                     </mat-panel-title>
                    
                 </mat-expansion-panel-header>
-                <p><b>Board:</b>CBSE</p>
-                <p><b>Stream:</b>Commerce</p>
-                <p><b>Year Of Passing:</b>2013</p>
+                <ng-template matExpansionPanelContent >
+                    <p><b>Board:</b>CBSE</p>
+                    <p><b>Stream:</b>Commerce</p>
+                    <p><b>Year Of Passing:</b>2013</p>
+                </ng-template>
+               
 
             </mat-expansion-panel>
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel >
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                        UG
                     </mat-panel-title>
                    
                 </mat-expansion-panel-header>
-                <p><b>University:</b>Panjab University</p>
-                <p><b>Course:</b>B.C.A</p>
-                <p><b>Year Of Passing:</b>2016</p>
+                <ng-template matExpansionPanelContent>
+                    <p><b>University:</b>Panjab University</p>
+                    <p><b>Course:</b>B.C.A</p>
+                    <p><b>Year Of Passing:</b>2016</p>
+
+                </ng-template>
+               
             </mat-expansion-panel>
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel >
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         PG
                     </mat-panel-title>
                     
                 </mat-expansion-panel-header>
-                <p><b>University:</b>Panjab University</p>
+                <ng-template matExpansionPanelContent>
+                    <p><b>University:</b>Panjab University</p>
                 <p><b>Course:</b>M.C.A</p>
                 <p><b>Year Of Passing:</b>2019</p>
+
+            </ng-template>
+               
             </mat-expansion-panel>
         </mat-accordion>
     </mat-card-content>

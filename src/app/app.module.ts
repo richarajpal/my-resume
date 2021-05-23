@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatDialogModule} from '@angular/material/dialog'
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +24,7 @@ import { InterestComponent } from './interest/interest.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     EducationComponent,
     SkillsComponent,
     InterestComponent,
-    ContactComponent
+    ContactComponent,
+    DialogComponent
 
 
   ],
@@ -49,8 +54,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatDividerModule,
     MatCardModule,
     HttpClientModule,
-    MatExpansionModule
-  ],
+    MatExpansionModule,
+    MatDialogModule],
+   
   providers: [],
   bootstrap: [AppComponent]
 })

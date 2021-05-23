@@ -30,6 +30,7 @@ mat-card-header{
   }
   mat-card{
     background-color: rgba(255,255,255,0.7)!important;
+    
 
   }
   mat-expansion-panel{
@@ -38,5 +39,6 @@ mat-card-header{
     
 
   }
+ 
   
  
